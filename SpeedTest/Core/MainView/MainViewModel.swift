@@ -33,6 +33,7 @@ final class MainViewModel: ObservableObject {
     }
 
     private func setSubscribtions() {
+        // Подписываемся на изменения в SpeedTestService
         speedTest?.$currentSpeed
             .receive(on: RunLoop.main)
             .sink { [weak self] speed in

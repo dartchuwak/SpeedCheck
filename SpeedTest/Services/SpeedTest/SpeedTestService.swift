@@ -7,22 +7,22 @@
 
 import Foundation
 import Alamofire
-import Combine
 
 final class SpeedTestService {
-    // private properties
+    // Private properties
     private var startTime: Date?
     private var endTime: Date?
     private var lastBytesReceived: Int = 0
     private var lastUpdateTime: Date?
     private var request: DataRequest?
-    // publised properties
+    // Publised properties
     @Published var bytesDownloaded: Int = 0
     @Published var currentSpeed: Double = 0.0
     @Published var finalSpeed: Double = 0.0
 
     func startTest(url: String) {
         guard let url = URL(string: url) else { return }
+        // Сброс измерений и данных перед старом
         self.bytesDownloaded = 0
         self.finalSpeed = 0.0
         self.currentSpeed = 0.0
@@ -49,14 +49,14 @@ final class SpeedTestService {
 
     func stop() {
         request?.cancel()  // Отменяем активный запрос
-              endTime = Date()  // Фиксируем время остановки
-              if let start = startTime, let end = endTime {
-                  let duration = end.timeIntervalSince(start)
-                  if duration > 0 {
-                      let speed = Double(bytesDownloaded) / duration / 1024 / 1024 * 8 // Скорость в Mbps
-                      finalSpeed = Double(speed)
-                  }
-              }
+        endTime = Date()  // Фиксируем время остановки
+        if let start = startTime, let end = endTime {
+            let duration = end.timeIntervalSince(start)
+            if duration > 0 {
+                let speed = Double(bytesDownloaded) / duration / 1024 / 1024 * 8 // Скорость в Mbps
+                finalSpeed = Double(speed)
+            }
+        }
     }
 
     private func calculateFinalSpeed() -> Double {
@@ -68,10 +68,11 @@ final class SpeedTestService {
 
     private func update(bytesReceived: Int) {
         let currentTime = Date()
+        let interval = 0.1 // Частота, с которой будут проводиться замеры
         if let lastUpdateTime = lastUpdateTime {
             let timeInterval = currentTime.timeIntervalSince(lastUpdateTime)
-            if timeInterval >= 0.1 { // Обновляем скорость не чаще чем каждые 0.1 секунды
-                let bytesDiff = bytesReceived - lastBytesReceived
+            if timeInterval >= interval { // Обновляем скорость не чаще чем через заданный интервал
+                let bytesDiff = bytesReceived - lastBytesReceived // Данные, полученные за интервал
                 currentSpeed = Double(Double(bytesDiff) / timeInterval / 1024 / 1024 * 8) // Скорость в Mbps
                 bytesDownloaded = bytesReceived
                 print("Current speed: \(currentSpeed) Mbps")
