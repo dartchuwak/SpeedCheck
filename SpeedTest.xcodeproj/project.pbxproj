@@ -8,21 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		A3840AA32BD81AC100C3D3CC /* SpeedTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3840AA22BD81AC100C3D3CC /* SpeedTestApp.swift */; };
-		A3840AA52BD81AC100C3D3CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3840AA42BD81AC100C3D3CC /* ContentView.swift */; };
+		A3840AA52BD81AC100C3D3CC /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3840AA42BD81AC100C3D3CC /* TabBarView.swift */; };
 		A3840AA72BD81AC200C3D3CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3840AA62BD81AC200C3D3CC /* Assets.xcassets */; };
 		A3840AAA2BD81AC200C3D3CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3840AA92BD81AC200C3D3CC /* Preview Assets.xcassets */; };
 		A3840AAC2BD81AC200C3D3CC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3840AAB2BD81AC200C3D3CC /* Persistence.swift */; };
-		A3840AAF2BD81AC200C3D3CC /* SpeedTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3840AAD2BD81AC200C3D3CC /* SpeedTest.xcdatamodeld */; };
+		A3840AAF2BD81AC200C3D3CC /* Settings.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3840AAD2BD81AC200C3D3CC /* Settings.xcdatamodeld */; };
+		A3840AB62BD81B0700C3D3CC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3840AB52BD81B0700C3D3CC /* MainView.swift */; };
+		A3840AB82BD81B1100C3D3CC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3840AB72BD81B1100C3D3CC /* SettingsView.swift */; };
+		A3840ABD2BD821A300C3D3CC /* SpeedTestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3840ABC2BD821A300C3D3CC /* SpeedTestService.swift */; };
+		A3840AC02BD8245600C3D3CC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A3840ABF2BD8245600C3D3CC /* Alamofire */; };
+		A3840AC22BD8245600C3D3CC /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = A3840AC12BD8245600C3D3CC /* AlamofireDynamic */; };
+		A3840AC42BD82C7100C3D3CC /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3840AC32BD82C7100C3D3CC /* SettingsViewModel.swift */; };
+		A3840AC72BD85A9E00C3D3CC /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3840AC62BD85A9E00C3D3CC /* Environment.swift */; };
+		A3840AC92BD85BE100C3D3CC /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3840AC82BD85BE100C3D3CC /* MainViewModel.swift */; };
+		A3840ACB2BD85E1800C3D3CC /* SettingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3840ACA2BD85E1800C3D3CC /* SettingsData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A3840A9F2BD81AC100C3D3CC /* SpeedTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeedTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3840AA22BD81AC100C3D3CC /* SpeedTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTestApp.swift; sourceTree = "<group>"; };
-		A3840AA42BD81AC100C3D3CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A3840AA42BD81AC100C3D3CC /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		A3840AA62BD81AC200C3D3CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3840AA92BD81AC200C3D3CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A3840AAB2BD81AC200C3D3CC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		A3840AAE2BD81AC200C3D3CC /* SpeedTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SpeedTest.xcdatamodel; sourceTree = "<group>"; };
+		A3840AB52BD81B0700C3D3CC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		A3840AB72BD81B1100C3D3CC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A3840ABC2BD821A300C3D3CC /* SpeedTestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedTestService.swift; sourceTree = "<group>"; };
+		A3840AC32BD82C7100C3D3CC /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		A3840AC52BD8301E00C3D3CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3840AC62BD85A9E00C3D3CC /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		A3840AC82BD85BE100C3D3CC /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		A3840ACA2BD85E1800C3D3CC /* SettingsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3840AC22BD8245600C3D3CC /* AlamofireDynamic in Frameworks */,
+				A3840AC02BD8245600C3D3CC /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,11 +74,10 @@
 		A3840AA12BD81AC100C3D3CC /* SpeedTest */ = {
 			isa = PBXGroup;
 			children = (
-				A3840AA22BD81AC100C3D3CC /* SpeedTestApp.swift */,
-				A3840AA42BD81AC100C3D3CC /* ContentView.swift */,
+				A3840ACC2BD8639D00C3D3CC /* App */,
+				A3840AD32BD863EE00C3D3CC /* Core */,
+				A3840ACD2BD863AC00C3D3CC /* Services */,
 				A3840AA62BD81AC200C3D3CC /* Assets.xcassets */,
-				A3840AAB2BD81AC200C3D3CC /* Persistence.swift */,
-				A3840AAD2BD81AC200C3D3CC /* SpeedTest.xcdatamodeld */,
 				A3840AA82BD81AC200C3D3CC /* Preview Content */,
 			);
 			path = SpeedTest;
@@ -71,6 +89,79 @@
 				A3840AA92BD81AC200C3D3CC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A3840ACC2BD8639D00C3D3CC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A3840AC52BD8301E00C3D3CC /* Info.plist */,
+				A3840AC62BD85A9E00C3D3CC /* Environment.swift */,
+				A3840AA22BD81AC100C3D3CC /* SpeedTestApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A3840ACD2BD863AC00C3D3CC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A3840AD22BD863E500C3D3CC /* Settings */,
+				A3840ACF2BD863C500C3D3CC /* SpeedTest */,
+				A3840ACE2BD863B800C3D3CC /* CoreData */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A3840ACE2BD863B800C3D3CC /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A3840AAB2BD81AC200C3D3CC /* Persistence.swift */,
+				A3840AAD2BD81AC200C3D3CC /* Settings.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		A3840ACF2BD863C500C3D3CC /* SpeedTest */ = {
+			isa = PBXGroup;
+			children = (
+				A3840ABC2BD821A300C3D3CC /* SpeedTestService.swift */,
+			);
+			path = SpeedTest;
+			sourceTree = "<group>";
+		};
+		A3840AD22BD863E500C3D3CC /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A3840ACA2BD85E1800C3D3CC /* SettingsData.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		A3840AD32BD863EE00C3D3CC /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A3840AD52BD8640000C3D3CC /* SettingsView */,
+				A3840AD42BD863F600C3D3CC /* MainView */,
+				A3840AA42BD81AC100C3D3CC /* TabBarView.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A3840AD42BD863F600C3D3CC /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				A3840AB52BD81B0700C3D3CC /* MainView.swift */,
+				A3840AC82BD85BE100C3D3CC /* MainViewModel.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		A3840AD52BD8640000C3D3CC /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				A3840AB72BD81B1100C3D3CC /* SettingsView.swift */,
+				A3840AC32BD82C7100C3D3CC /* SettingsViewModel.swift */,
+			);
+			path = SettingsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +180,10 @@
 			dependencies = (
 			);
 			name = SpeedTest;
+			packageProductDependencies = (
+				A3840ABF2BD8245600C3D3CC /* Alamofire */,
+				A3840AC12BD8245600C3D3CC /* AlamofireDynamic */,
+			);
 			productName = SpeedTest;
 			productReference = A3840A9F2BD81AC100C3D3CC /* SpeedTest.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +212,9 @@
 				Base,
 			);
 			mainGroup = A3840A962BD81AC000C3D3CC;
+			packageReferences = (
+				A3840ABE2BD8245600C3D3CC /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = A3840AA02BD81AC100C3D3CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,9 +242,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3840AAC2BD81AC200C3D3CC /* Persistence.swift in Sources */,
-				A3840AA52BD81AC100C3D3CC /* ContentView.swift in Sources */,
+				A3840ABD2BD821A300C3D3CC /* SpeedTestService.swift in Sources */,
+				A3840ACB2BD85E1800C3D3CC /* SettingsData.swift in Sources */,
+				A3840AA52BD81AC100C3D3CC /* TabBarView.swift in Sources */,
+				A3840AC72BD85A9E00C3D3CC /* Environment.swift in Sources */,
 				A3840AA32BD81AC100C3D3CC /* SpeedTestApp.swift in Sources */,
-				A3840AAF2BD81AC200C3D3CC /* SpeedTest.xcdatamodeld in Sources */,
+				A3840AC92BD85BE100C3D3CC /* MainViewModel.swift in Sources */,
+				A3840AB82BD81B1100C3D3CC /* SettingsView.swift in Sources */,
+				A3840AB62BD81B0700C3D3CC /* MainView.swift in Sources */,
+				A3840AAF2BD81AC200C3D3CC /* Settings.xcdatamodeld in Sources */,
+				A3840AC42BD82C7100C3D3CC /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +388,8 @@
 				DEVELOPMENT_TEAM = UN5MX5RT64;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SpeedTest/App/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = NSAppTransportSecurity;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -312,6 +419,8 @@
 				DEVELOPMENT_TEAM = UN5MX5RT64;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SpeedTest/App/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = NSAppTransportSecurity;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -353,14 +462,38 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		A3840ABE2BD8245600C3D3CC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A3840ABF2BD8245600C3D3CC /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3840ABE2BD8245600C3D3CC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		A3840AC12BD8245600C3D3CC /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3840ABE2BD8245600C3D3CC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
+
 /* Begin XCVersionGroup section */
-		A3840AAD2BD81AC200C3D3CC /* SpeedTest.xcdatamodeld */ = {
+		A3840AAD2BD81AC200C3D3CC /* Settings.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				A3840AAE2BD81AC200C3D3CC /* SpeedTest.xcdatamodel */,
 			);
 			currentVersion = A3840AAE2BD81AC200C3D3CC /* SpeedTest.xcdatamodel */;
-			path = SpeedTest.xcdatamodeld;
+			path = Settings.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
