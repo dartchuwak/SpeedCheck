@@ -32,7 +32,7 @@ struct MainView: View {
                         mainViewModel.stopTest()
                         isRunning.toggle()
                     } else {
-                        mainViewModel.startTest()
+                        mainViewModel.startTest(url: settingsViewModel.URLString)
                         isRunning.toggle()
                     }
                 }, label: {
@@ -42,7 +42,7 @@ struct MainView: View {
                         .cornerRadius(15)
                 })
                 ScrollView(.horizontal) {
-                    Text("Target URL: \(mainViewModel.settingsData.url)")
+                    Text("Target URL: \(settingsViewModel.URLString)")
                         .lineLimit(1)
                 }
                 .padding(.horizontal)

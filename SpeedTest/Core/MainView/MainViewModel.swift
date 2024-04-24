@@ -10,7 +10,6 @@ import Combine
 import SwiftUI
 
 final class MainViewModel: ObservableObject {
-    let settingsData: SettingsData
     let speedTest: SpeedTestService?
     @Published var currentSpeed: Double = 0.0
     @Published var finalSpeed: Double = 0.0
@@ -19,14 +18,13 @@ final class MainViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
 
 
-    init(settingsData: SettingsData, speedTest: SpeedTestService) {
+    init(speedTest: SpeedTestService) {
         self.speedTest = speedTest
-        self.settingsData = settingsData
         setSubscribtions()
     }
 
-    func startTest() {
-        speedTest?.startTest(url: settingsData.url)
+    func startTest(url: String) {
+        speedTest?.startTest(url: url)
     }
 
     func stopTest() {

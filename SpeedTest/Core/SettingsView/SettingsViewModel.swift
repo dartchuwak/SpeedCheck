@@ -10,8 +10,6 @@ import SwiftUI
 import Combine
 
 final class SettingsViewModel: ObservableObject {
-    @Environment(\.managedObjectContext) var coreData
-    let settingsData: SettingsData
     @Environment(\.speedTestService) var speedTest
     @Published var isDarkMode: Bool = false
     var currentScheme: ColorScheme {
@@ -19,23 +17,13 @@ final class SettingsViewModel: ObservableObject {
     }
     @Published var showCurrentSpeed = true
     @Published var showTotalSpeed = true
-    @Published var URLString = "" {
-        didSet {
-            settingsData.url = URLString
-        }
-    }
+    @Published var URLString = ""
     @Published var currentSpeed = 0
     @Published var finalSpeed = 0
     @Published var bytesDownloaded = 0
 
-    init(settingsData: SettingsData) {
-        self.settingsData = settingsData
-        guard let settings = CoreDataStack.shared.loadSettings() else { return }
-        self.settingsData.url = settings.urlString ?? "http://ipv4.download.thinkbroadband.com/512MB.zip"
-        self.settingsData.isDarkMode = settings.isDarkMode
-        self.settingsData.showTotalSpeed = settings.showTotalSpeed
-        self.settingsData.showCurrentSpeed = settings.showCurrentSpeed
-
+    init() {
+        guard let settings = CoreDataStack.shared.loadSettings() else { return } // Загрузка из CoreData
         self.isDarkMode = settings.isDarkMode
         self.showTotalSpeed = settings.showTotalSpeed
         self.showCurrentSpeed = settings.showCurrentSpeed

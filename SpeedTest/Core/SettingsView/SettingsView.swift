@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SettingsView: View {
     @EnvironmentObject var settings: SettingsViewModel
-    
     var body: some View {
         ZStack {
             Color.bg
@@ -49,5 +48,5 @@ struct SettingsView: View {
 
 #Preview {
     SettingsView()
-        .environmentObject(SettingsViewModel(settingsData: SettingsData()))
+        .environmentObject(SettingsViewModel())
 }

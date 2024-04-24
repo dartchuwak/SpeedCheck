@@ -14,10 +14,9 @@ struct SpeedTestApp: App {
     @StateObject var mainViewModel: MainViewModel
 
     init() {
-        let settingsData = SettingsData()
         let speedTestService = SpeedTestService()
-        self._settingsViewModel = StateObject(wrappedValue: SettingsViewModel(settingsData: settingsData))
-        self._mainViewModel = StateObject(wrappedValue: MainViewModel(settingsData: settingsData, speedTest: speedTestService))
+        self._settingsViewModel = StateObject(wrappedValue: SettingsViewModel())
+        self._mainViewModel = StateObject(wrappedValue: MainViewModel(speedTest: speedTestService))
     }
     var body: some Scene {
         WindowGroup {

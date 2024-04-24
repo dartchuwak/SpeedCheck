@@ -8,9 +8,9 @@
 import Foundation
 import Combine
 
-final class SettingsData {
-    @Published var isDarkMode: Bool = false
-    @Published var showCurrentSpeed = true
-    @Published var showTotalSpeed = true
-    @Published var url: String = "http://example.com"
-}
+//final class SettingsData {
+//    @Published var isDarkMode: Bool = false
+//    @Published var showCurrentSpeed = true
+//    @Published var showTotalSpeed = true
+//    @Published var url: String = "http://example.com"
+//}
