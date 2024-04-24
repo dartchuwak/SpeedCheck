@@ -9,7 +9,6 @@ import SwiftUI
 
 @main
 struct SpeedTestApp: App {
-    let persistenceController = CoreDataStack.shared
     @StateObject var settingsViewModel: SettingsViewModel
     @StateObject var mainViewModel: MainViewModel
 
@@ -22,7 +21,6 @@ struct SpeedTestApp: App {
         WindowGroup {
             TabBarView()
                 .environment(\.colorScheme, settingsViewModel.currentScheme == .light ? .light : .dark)
-                .environment(\.managedObjectContext, persistenceController.context)
                 .environmentObject(settingsViewModel)
                 .environmentObject(mainViewModel)
                 .environment(\.speedTestService, SpeedTestService())

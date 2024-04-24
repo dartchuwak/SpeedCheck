@@ -14,9 +14,8 @@ struct TabBarView: View {
         TabView {
             MainView()
                 .tabItem { Label("Speed test", systemImage: "network") }
-            NavigationView {
+            NavigationView { // NavView for Toolbar
                 SettingsView()
-
             }
             .tabItem { Label("Settings", systemImage: "gear") }
         }

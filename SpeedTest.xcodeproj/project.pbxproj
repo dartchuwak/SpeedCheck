@@ -21,7 +21,7 @@
 		A3840AC42BD82C7100C3D3CC /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3840AC32BD82C7100C3D3CC /* SettingsViewModel.swift */; };
 		A3840AC72BD85A9E00C3D3CC /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3840AC62BD85A9E00C3D3CC /* Environment.swift */; };
 		A3840AC92BD85BE100C3D3CC /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3840AC82BD85BE100C3D3CC /* MainViewModel.swift */; };
-		A3840ACB2BD85E1800C3D3CC /* SettingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3840ACA2BD85E1800C3D3CC /* SettingsData.swift */; };
+		A3840AD82BD93B2000C3D3CC /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3840AD72BD93B2000C3D3CC /* Endpoints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +39,7 @@
 		A3840AC52BD8301E00C3D3CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3840AC62BD85A9E00C3D3CC /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		A3840AC82BD85BE100C3D3CC /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		A3840ACA2BD85E1800C3D3CC /* SettingsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsData.swift; sourceTree = "<group>"; };
+		A3840AD72BD93B2000C3D3CC /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +74,7 @@
 		A3840AA12BD81AC100C3D3CC /* SpeedTest */ = {
 			isa = PBXGroup;
 			children = (
+				A3840AD62BD93B0F00C3D3CC /* Enums */,
 				A3840ACC2BD8639D00C3D3CC /* App */,
 				A3840AD32BD863EE00C3D3CC /* Core */,
 				A3840ACD2BD863AC00C3D3CC /* Services */,
@@ -104,7 +105,6 @@
 		A3840ACD2BD863AC00C3D3CC /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				A3840AD22BD863E500C3D3CC /* Settings */,
 				A3840ACF2BD863C500C3D3CC /* SpeedTest */,
 				A3840ACE2BD863B800C3D3CC /* CoreData */,
 			);
@@ -126,14 +126,6 @@
 				A3840ABC2BD821A300C3D3CC /* SpeedTestService.swift */,
 			);
 			path = SpeedTest;
-			sourceTree = "<group>";
-		};
-		A3840AD22BD863E500C3D3CC /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				A3840ACA2BD85E1800C3D3CC /* SettingsData.swift */,
-			);
-			path = Settings;
 			sourceTree = "<group>";
 		};
 		A3840AD32BD863EE00C3D3CC /* Core */ = {
@@ -162,6 +154,14 @@
 				A3840AC32BD82C7100C3D3CC /* SettingsViewModel.swift */,
 			);
 			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		A3840AD62BD93B0F00C3D3CC /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				A3840AD72BD93B2000C3D3CC /* Endpoints.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +243,6 @@
 			files = (
 				A3840AAC2BD81AC200C3D3CC /* Persistence.swift in Sources */,
 				A3840ABD2BD821A300C3D3CC /* SpeedTestService.swift in Sources */,
-				A3840ACB2BD85E1800C3D3CC /* SettingsData.swift in Sources */,
 				A3840AA52BD81AC100C3D3CC /* TabBarView.swift in Sources */,
 				A3840AC72BD85A9E00C3D3CC /* Environment.swift in Sources */,
 				A3840AA32BD81AC100C3D3CC /* SpeedTestApp.swift in Sources */,
@@ -252,6 +251,7 @@
 				A3840AB62BD81B0700C3D3CC /* MainView.swift in Sources */,
 				A3840AAF2BD81AC200C3D3CC /* Settings.xcdatamodeld in Sources */,
 				A3840AC42BD82C7100C3D3CC /* SettingsViewModel.swift in Sources */,
+				A3840AD82BD93B2000C3D3CC /* Endpoints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

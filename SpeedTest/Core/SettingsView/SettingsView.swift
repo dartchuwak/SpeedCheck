@@ -15,10 +15,10 @@ struct SettingsView: View {
                 .ignoresSafeArea()
             VStack {
                 Toggle(isOn: $settings.isDarkMode, label: {
-                    Text("Use Dark Color Scheme")
+                    Text("Use Dark Mode")
                 })
 
-                TextField("", text: $settings.URLString, prompt: Text(verbatim: "http://ipv4.download.thinkbroadband.com/512MB.zip"))
+                TextField("", text: $settings.URLString, prompt: Text(verbatim: Endpoints.size512))
                     .padding()
                     .overlay {
                         RoundedRectangle(cornerRadius: 15)

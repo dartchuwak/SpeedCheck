@@ -24,10 +24,11 @@ final class SettingsViewModel: ObservableObject {
 
     init() {
         guard let settings = CoreDataStack.shared.loadSettings() else { return } // Загрузка из CoreData
+        // Установка значения
         self.isDarkMode = settings.isDarkMode
         self.showTotalSpeed = settings.showTotalSpeed
         self.showCurrentSpeed = settings.showCurrentSpeed
-        self.URLString = settings.urlString ?? "http://ipv4.download.thinkbroadband.com/512MB.zip"
+        self.URLString = settings.urlString ?? Endpoints.size512
     }
 
     func saveSettings() {
@@ -35,6 +36,6 @@ final class SettingsViewModel: ObservableObject {
     }
 
     func resetURL() {
-        URLString = "http://ipv4.download.thinkbroadband.com/512MB.zip"
+        URLString = Endpoints.size512
     }
 }
