@@ -10,6 +10,8 @@ import CoreData
 class CoreDataStack {
     static let shared = CoreDataStack()
 
+    private init() {}
+
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "Settings")
         container.loadPersistentStores { storeDescription, error in
@@ -30,7 +32,7 @@ class CoreDataStack {
 
         do {
             let results = try context.fetch(fetchRequest)
-            let settings = results.first ?? Settings(context: context) // Используйте существующие настройки или создайте новые
+            let settings = results.first ?? Settings(context: context)
             settings.isDarkMode = isDarkMode
             settings.showCurrentSpeed = showCurrentSpeed
             settings.showTotalSpeed = showTotalSpeed
@@ -46,7 +48,7 @@ class CoreDataStack {
         let fetchRequest: NSFetchRequest<Settings> = Settings.fetchRequest()
         do {
             let settings = try context.fetch(fetchRequest)
-            return settings.first // Предполагая, что у нас есть только один набор настроек
+            return settings.first
         } catch {
             print("Failed to fetch settings: \(error)")
             return nil

@@ -28,7 +28,7 @@ struct MainView: View {
                      .gaugeStyle(SpeedometerGaugeStyle())
 
                 Button(action: {
-                    if isRunning {
+                    if mainViewModel.isRunning {
                         mainViewModel.stopTest()
                         isRunning.toggle()
                     } else {
@@ -36,7 +36,7 @@ struct MainView: View {
                         isRunning.toggle()
                     }
                 }, label: {
-                    Text(!isRunning ? "Test Speed": "Stop")
+                    Text(!mainViewModel.isRunning ? "Test Speed": "Stop")
                         .frame(width: width, height: 44)
                         .background(.yellow)
                         .cornerRadius(15)

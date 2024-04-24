@@ -15,10 +15,11 @@ final class SpeedTestService {
     private var lastBytesReceived: Int = 0
     private var lastUpdateTime: Date?
     private var request: DataRequest?
-    // Publised properties
+    // Published properties
     @Published var bytesDownloaded: Int = 0
     @Published var currentSpeed: Double = 0.0
     @Published var finalSpeed: Double = 0.0
+    @Published var isRunning: Bool = false
 
     func startTest(url: String) {
         guard let url = URL(string: url) else { return }
@@ -28,6 +29,7 @@ final class SpeedTestService {
         self.currentSpeed = 0.0
         self.lastBytesReceived = 0
         startTime = Date() // Засекаем время начала загрузки
+        isRunning = true
         request = AF.request(url, method: .get)
             .downloadProgress { progress in
                 // Отслеживаем прогресс загрузки и рассчитываем скорость в реальном времени
@@ -40,8 +42,10 @@ final class SpeedTestService {
                     self.endTime = Date() // Засекаем время окончания загрузки
                     let speed = self.calculateFinalSpeed()
                     self.finalSpeed = Double(speed)
+                    self.isRunning = false
                     print("Final download speed: \(speed) Mbps")
                 case .failure(let error):
+                    self.isRunning = false
                     print("Download error: \(error.localizedDescription)")
                 }
             }

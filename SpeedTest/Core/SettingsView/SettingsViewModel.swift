@@ -10,6 +10,7 @@ import SwiftUI
 import Combine
 
 final class SettingsViewModel: ObservableObject {
+    @Environment(\.managedObjectContext) var coreData
     let settingsData: SettingsData
     @Environment(\.speedTestService) var speedTest
     @Published var isDarkMode: Bool = false

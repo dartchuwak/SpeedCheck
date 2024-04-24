@@ -15,6 +15,7 @@ final class MainViewModel: ObservableObject {
     @Published var currentSpeed: Double = 0.0
     @Published var finalSpeed: Double = 0.0
     @Published var bytesDownloaded = 0
+    @Published var isRunning = false
     private var cancellables = Set<AnyCancellable>()
 
 
@@ -48,8 +49,15 @@ final class MainViewModel: ObservableObject {
             .store(in: &cancellables)
         speedTest?.$bytesDownloaded
             .receive(on: RunLoop.main)
-            .sink { [weak self] speed in
-                self?.bytesDownloaded = speed
+            .sink { [weak self] value in
+                self?.bytesDownloaded = value
+            }
+            .store(in: &cancellables)
+
+        speedTest?.$isRunning
+            .receive(on: RunLoop.main)
+            .sink { [weak self] value in
+                self?.isRunning = value
             }
             .store(in: &cancellables)
     }
